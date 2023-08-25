@@ -2,8 +2,7 @@ import { defineConfig } from "astro/config"
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://hypetechdev.github.io",
-    base: "/hypetechedu",
+    site: "https://education.hypetech.io",
     vite: {
         ssr: {
             noExternal: ["@picocss/pico"],
