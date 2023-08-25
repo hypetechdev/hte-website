@@ -9,7 +9,7 @@
         "dev": "astro dev",
         "preview": "astro preview",
         "start": "astro dev",
-        "reset": "rm -rf node_modules && pnpm i"
+        "reset": "rm -rf node_modules && pnpm install --no-frozen-lockfile"
     },
     "dependencies": {
         "@picocss/pico": "^1.5.10",
@@ -17,5 +17,9 @@
     },
     "devDependencies": {
         "@hypetech/prettier-config": "^1.0.1"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "pnpm": ">=8.0.0"
     }
 }
