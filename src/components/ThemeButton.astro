@@ -1,0 +1,62 @@
+<span class="btn-toggle-theme" data-toggle-theme-btn>🌞</span>
+
+<script>
+    const [toggleThemeBtn] = document.querySelectorAll("[data-toggle-theme-btn]")
+
+    toggleThemeBtn.addEventListener("click", toggleTheme)
+
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute("data-theme") ?? "dark"
+        const theme = currentTheme === "dark" ? "light" : "dark"
+
+        // set theme to document root
+        document.documentElement.setAttribute("data-theme", theme)
+
+        const textLogoImgs = {
+            dark: "/assets/hte-logo-text-dark.png",
+            light: "/assets/hte-logo-text-light.png",
+        }
+
+        const pathLogoImgs = {
+            dark: "/assets/hte-logo-dark.png",
+            light: "/assets/hte-logo-light.png",
+        }
+
+        const $textLogo = document.querySelector(".text-logo")
+        const $pathLogo = document.querySelector(".path-logo")
+        const $footerLogo = document.querySelector(".footer-logo")
+
+        $textLogo?.setAttribute("src", textLogoImgs[theme])
+        $pathLogo?.setAttribute("src", pathLogoImgs[theme])
+        $footerLogo?.setAttribute("src", textLogoImgs[theme])
+
+        toggleThemeBtn.textContent = theme === "dark" ? "☀️" : "🌔"
+
+        // const THEME_STORAGE_KEY = "hte_theme"
+        // localStorage.setItem(THEME_STORAGE_KEY, theme)
+    }
+</script>
+
+<style>
+    .btn-toggle-theme {
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--color-bg);
+        box-shadow: 0 0 0.5rem var(--color-shadow);
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .btn-toggle-theme:hover {
+        transform: scale(1.2);
+        transition: all 0.1s ease-in-out;
+    }
+
+    .btn-toggle-theme:active,
+    .btn-toggle-theme:focus {
+        background: transparent;
+    }
+</style>
