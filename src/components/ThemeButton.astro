@@ -1,14 +1,32 @@
-<span class="btn-toggle-theme" data-toggle-theme-btn>🌞</span>
+<span class="btn-toggle-theme" data-toggle-theme-btn>☀️</span>
 
 <script>
     const [toggleThemeBtn] = document.querySelectorAll("[data-toggle-theme-btn]")
-
     toggleThemeBtn.addEventListener("click", toggleTheme)
+
+    // DOM content loaded
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get the current theme from local storage
+        const userTheme = localStorage.getItem("theme")
+
+        // If the current local storage item is "dark"
+        if (userTheme) {
+            // set theme to document root
+            setTheme(userTheme)
+        }
+    })
 
     function toggleTheme() {
         const currentTheme = document.documentElement.getAttribute("data-theme") ?? "dark"
         const theme = currentTheme === "dark" ? "light" : "dark"
 
+        setTheme(theme)
+
+        const THEME_STORAGE_KEY = "theme"
+        localStorage.setItem(THEME_STORAGE_KEY, theme)
+    }
+
+    function setTheme(theme: "dark" | "light" | string) {
         // set theme to document root
         document.documentElement.setAttribute("data-theme", theme)
 
@@ -31,9 +49,6 @@
         $footerLogo?.setAttribute("src", textLogoImgs[theme])
 
         toggleThemeBtn.textContent = theme === "dark" ? "☀️" : "🌔"
-
-        // const THEME_STORAGE_KEY = "hte_theme"
-        // localStorage.setItem(THEME_STORAGE_KEY, theme)
     }
 </script>
 

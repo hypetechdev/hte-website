@@ -31,6 +31,14 @@ const { title } = Astro.props
 </html>
 
 <style is:global>
+    * {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: -moz-none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
     .box {
         padding: 1rem;
         border-radius: 0.5rem;
@@ -55,13 +63,5 @@ const { title } = Astro.props
         transform: scale(1.02);
         transition: all 0.1s ease-in-out;
         cursor: pointer;
-    }
-
-    * {
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: -moz-none;
-        -o-user-select: none;
-        user-select: none;
     }
 </style>
