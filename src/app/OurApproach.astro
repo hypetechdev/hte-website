@@ -1,0 +1,34 @@
+---
+import InfoCard from "../components/InfoCard.astro"
+import collaborative from "../images/collaborative.svg"
+import practical from "../images/practical.svg"
+import expertise from "../images/expertise.svg"
+import brain from "../images/brain.svg"
+import world from "../images/world.svg"
+import recharging from "../images/recharging.svg"
+---
+
+<section>
+    <section class="grid">
+        <InfoCard title="Collaborative" body="Join forces with talented developers and learn together.">
+            <img slot="card-icon" src={collaborative} alt="" />
+        </InfoCard>
+        <InfoCard title="Practical" body="Dive into hands-on exercises and workshops to sharpen your skills.">
+            <img slot="card-icon" src={practical} alt="" />
+        </InfoCard>
+        <InfoCard title="Expertise" body="Gain insights from seasoned professionals in the programming world.">
+            <img slot="card-icon" src={expertise} alt="" />
+        </InfoCard>
+    </section>
+    <section class="grid">
+        <InfoCard title="Engaging" body="Experience interactive lectures that dive deep into programming concepts.">
+            <img slot="card-icon" src={brain} alt="" />
+        </InfoCard>
+        <InfoCard title="Real-world" body="Tackle real-world coding challenges to boost your confidence.">
+            <img slot="card-icon" src={recharging} alt="" />
+        </InfoCard>
+        <InfoCard title="Global" body="Expand your horizons with workshops and lectures available worldwide.">
+            <img slot="card-icon" src={world} alt="" />
+        </InfoCard>
+    </section>
+</section>

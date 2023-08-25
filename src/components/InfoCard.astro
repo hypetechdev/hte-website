@@ -1,0 +1,21 @@
+---
+interface Props {
+    title: string
+    body: string
+}
+
+const { title, body } = Astro.props
+---
+
+<article class="transparent">
+    <slot name="card-icon" />
+    <br />
+    <br />
+    <h3>
+        {title}
+    </h3>
+    <p>
+        {body}
+    </p>
+    <slot name="card-cta" />
+</article>

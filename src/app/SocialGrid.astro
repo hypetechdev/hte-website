@@ -1,0 +1,46 @@
+---
+import linkedin from "../images/linkedin.svg"
+import youtube from "../images/youtube.svg"
+import meetup from "../images/meetup.svg"
+---
+
+<div class="grid">
+    <article>
+        <a class="social-icon" href="https://www.meetup.com/hype-tech" target="_blank">
+            <img width="50%" src={meetup} alt="Meetup" />
+        </a>
+    </article>
+    <article>
+        <a class="center social-icon" href="https://www.youtube.com/c/HypeTechEducation" target="_blank">
+            <img width="50%" src={youtube} alt="YouTube" />
+        </a>
+    </article>
+    <article>
+        <a class="social-icon" href="https://linkedin.com/company/hypetech-education" target="_blank">
+            <img width="40%" src={linkedin} alt="Linkedin" />
+        </a>
+    </article>
+</div>
+
+<style>
+    article {
+        text-align: center;
+    }
+
+    a.social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        filter: grayscale(100%);
+    }
+
+    a.social-icon:hover {
+        transform: scale(1.1);
+        /* grayscale */
+        filter: grayscale(0%);
+        /* hover effect */
+        transition: all 0.2s ease-in-out;
+    }
+</style>

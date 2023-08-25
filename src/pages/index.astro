@@ -1,0 +1,32 @@
+---
+import Layout from "layouts/Layout.astro"
+import HeroSection from "app/HeroSection.astro";
+import EventsSection from "app/EventsSection.astro"
+import OurApproach from "app/OurApproach.astro"
+import DiscordBanner from "app/DiscordBanner.astro"
+import SocialGrid from "app/SocialGrid.astro"
+import JournalBanner from "app/JournalBanner.astro"
+import FaqSection from "app/FaqSection.astro"
+import BookConsultation from "app/BookConsultation.astro"
+
+import Section from "components/Section.astro"
+---
+
+<Layout title="HypeTech Education">
+    <HeroSection />
+    <EventsSection />
+    <Section title="Our approach">
+        <OurApproach />
+    </Section>
+    <Section title="HypeTech Community">
+        <DiscordBanner />
+        <SocialGrid />
+        <JournalBanner />
+    </Section>
+    <Section title="Frequently Asked Questions">
+        <FaqSection />
+    </Section>
+    <Section>
+        <BookConsultation />
+    </Section>
+</Layout>

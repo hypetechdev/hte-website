@@ -1,0 +1,56 @@
+---
+import "@picocss/pico"
+import Footer from "../app/Footer.astro"
+
+interface Props {
+    title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="HypeTech Education" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <main class="container">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style is:global>
+    .box {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: var(--color-bg);
+        box-shadow: 0 0 0.5rem var(--color-shadow);
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    article {
+        margin-top: 1rem !important;
+        margin-bottom: 0rem !important;
+    }
+
+    article.hover:hover {
+        transform: scale(1.02);
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+    }
+</style>
