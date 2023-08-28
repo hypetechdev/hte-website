@@ -1,4 +1,6 @@
 ---
+import Paper from "./Paper.astro"
+
 interface Props {
     title: string
     body: string
@@ -7,7 +9,7 @@ interface Props {
 const { title, body } = Astro.props
 ---
 
-<article class="transparent">
+<Paper>
     <slot name="card-icon" />
     <br />
     <br />
@@ -18,4 +20,4 @@ const { title, body } = Astro.props
         {body}
     </p>
     <slot name="card-cta" />
-</article>
+</Paper>

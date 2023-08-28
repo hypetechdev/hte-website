@@ -1,0 +1,13 @@
+---
+interface Props {
+    animated?: boolean
+    animation?: string
+    animationDuration?: number
+}
+
+const { animated = true, animation = "fade-up", animationDuration = 1500 } = Astro.props
+---
+
+<article data-aos={animated ? animation : undefined} data-aos-duration={animationDuration}>
+    <slot />
+</article>

@@ -30,15 +30,15 @@
         // set theme to document root
         document.documentElement.setAttribute("data-theme", theme)
 
-        const textLogoImgs = {
+        const textLogoImgs: any = {
             dark: "/assets/hte-logo-text-dark.png",
             light: "/assets/hte-logo-text-light.png",
-        }
+        } as const
 
-        const pathLogoImgs = {
+        const pathLogoImgs: any = {
             dark: "/assets/hte-logo-dark.png",
             light: "/assets/hte-logo-light.png",
-        }
+        } as const
 
         const $textLogo = document.querySelector(".text-logo")
         const $pathLogo = document.querySelector(".path-logo")
