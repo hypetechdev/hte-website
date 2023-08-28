@@ -1,0 +1,23 @@
+---
+const trackingId = import.meta.env.PUBLIC_GA_ID
+---
+
+<!-- in <head> before GTM code -->
+<script is:inline>
+window.dataLayer = window.dataLayer || []
+function gtag() {
+    dataLayer.push(arguments)
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K39Q3DS1G5"></script>
+
+<script is:inline define:vars={{ trackingId }}>
+window.dataLayer = window.dataLayer || []
+function gtag() {
+    dataLayer.push(arguments)
+}
+gtag("js", new Date())
+gtag("config", trackingId)
+</script>
