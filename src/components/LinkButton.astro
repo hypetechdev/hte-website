@@ -1,0 +1,59 @@
+---
+export interface LinkButtonProps {
+    label: string
+    href: string
+    imgSrc: string
+    target?: string
+    rel?: string
+    tooltip?: string
+    animation?: string
+    animationDuration?: number
+}
+
+const {
+    label = "",
+    href,
+    imgSrc,
+    tooltip,
+    target = "_blank",
+    rel = "noopener noreferrer",
+    animation = "fade-up",
+    animationDuration = 1000,
+} = Astro.props
+---
+
+<div data-aos={animation} data-aos-duration={animationDuration}>
+    <a role="button" class="contrast outline link" href={href} target={target} data-tooltip={tooltip} rel={rel}>
+        {imgSrc && <img src={imgSrc} alt={tooltip} />}
+        <slot>
+            {label}
+        </slot>
+    </a>
+</div>
+
+<style>
+    .link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem !important;
+        text-decoration: none;
+        color: var(--color-contrast);
+        background-color: var(--color-background);
+        transition: all 0.2s ease-in-out;
+        border: 1px dashed #777;
+        margin-top: 0.8rem;
+        min-width: 270px;
+    }
+
+    .link img {
+        width: 1.5rem;
+        left: 1rem;
+        position: absolute;
+    }
+
+    /* social media hover purple blue gradinet with scale  */
+    a:hover {
+        transform: scale(1.08) !important;
+        filter: drop-shadow(0 0 0.5rem #a78bfa);
+    }
+</style>

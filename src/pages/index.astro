@@ -10,23 +10,27 @@ import FaqSection from "app/FaqSection.astro"
 import BookConsultation from "app/BookConsultation.astro"
 
 import Section from "components/Section.astro"
+import Footer from "app/Footer.astro"
 ---
 
 <Layout title="HypeTech Education">
-    <HeroSection />
-    <EventsSection />
-    <Section title="Our approach">
-        <OurApproach />
-    </Section>
-    <Section title="HypeTech Community">
-        <DiscordBanner />
-        <SocialGrid />
-        <JournalBanner />
-    </Section>
-    <Section title="Frequently Asked Questions">
-        <FaqSection />
-    </Section>
-    <Section>
-        <BookConsultation />
-    </Section>
+    <main class="container">
+        <HeroSection />
+        <EventsSection />
+        <Section title="Our approach">
+            <OurApproach />
+        </Section>
+        <Section title="HypeTech Community">
+            <DiscordBanner />
+            <SocialGrid />
+            <JournalBanner />
+        </Section>
+        <Section title="Frequently Asked Questions">
+            <FaqSection />
+        </Section>
+        <Section>
+            <BookConsultation />
+        </Section>
+        <Footer slot="footer" />
+    </main>
 </Layout>

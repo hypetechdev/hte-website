@@ -1,16 +1,16 @@
 ---
 import "@picocss/pico"
 
-import Footer from "app/Footer.astro"
 import GlobalStyles from "components/GlobalStyles.astro"
 import GoogleScripts from "components/GoogleScripts.astro"
 import ThemeButton from "components/ThemeButton.astro"
 
 interface Props {
     title: string
+    container?: boolean
 }
 
-const { title } = Astro.props
+const { title, container = true } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -27,10 +27,8 @@ const { title } = Astro.props
     <body>
         <GlobalStyles />
         <ThemeButton />
-        <main class="container">
-            <slot />
-        </main>
-        <Footer />
+        <slot />
+        <slot name="footer" />
         <script>
             import AOS from "aos"
             import "aos/dist/aos.css"

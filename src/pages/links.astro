@@ -1,0 +1,38 @@
+---
+import LinkButton, { LinkButtonProps } from "components/LinkButton.astro"
+import Layout from "../layouts/Layout.astro"
+
+const data: LinkButtonProps[] = [
+    {
+        label: "YouTube",
+        href: "https://www.youtube.com/c/HypeTechEducation",
+        imgSrc: "/assets/social/brand-youtube.svg",
+    },
+    { label: "Discord", href: "https://discord.gg/94uhCAkFKf", imgSrc: "/assets/social/brand-discord.svg" },
+    { label: "Meetup", href: "https://www.meetup.com/hype-tech", imgSrc: "/assets/social/social.svg" },
+    { label: "Substack", href: "https://hypetechjournal.substack.com/", imgSrc: "/assets/social/world.svg" },
+    { label: "Instagram", href: "https://instagram.com/hypetechdev", imgSrc: "/assets/social/brand-instagram.svg" },
+    {
+        label: "LinkedIn",
+        href: "https://linkedin.com/company/hypetech-education",
+        imgSrc: "/assets/social/brand-linkedin.svg",
+    },
+    { label: "ReactWeek.dev", href: "https://reactweek.dev", imgSrc: "/assets/social/world.svg" },
+]
+---
+
+<Layout title="Links | HypeTech" container={false}>
+    <main class="fullpage">
+        <div class="center">
+            <img class="text-logo" width="35%" src="/assets/hte-logo-text-dark.png" alt="HypeTech Education logo" />
+        </div>
+        <div>
+            <code style="text-align: center;">tech talks, lectures and workshops</code>
+        </div>
+        {data.map((item, index) => <LinkButton {...item} animationDuration={index * 400} />)}
+        <br />
+        <p style="position: absolute; bottom: 1rem;">
+            <small>Discover the world of Hype Tech</small>
+        </p>
+    </main>
+</Layout>
