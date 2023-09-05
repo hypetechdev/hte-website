@@ -14,7 +14,7 @@
     "dependencies": {
         "@picocss/pico": "^1.5.10",
         "aos": "^2.3.4",
-        "astro": "^2.10.13"
+        "astro": "^3.0.8"
     },
     "devDependencies": {
         "@hypetech/prettier-config": "^1.0.1"

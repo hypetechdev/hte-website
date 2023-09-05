@@ -7,29 +7,30 @@ import expertise from "images/expertise.svg"
 import brain from "images/brain.svg"
 import world from "images/world.svg"
 import recharging from "images/recharging.svg"
+import { Image } from "astro:assets"
 ---
 
 <section>
     <section class="grid">
         <Card title="Collaborative" body="Join forces with talented developers and learn together.">
-            <img slot="card-icon" src={collaborative} alt="" />
+            <Image slot="card-icon" src={collaborative} alt="" />
         </Card>
         <Card title="Practical" body="Dive into hands-on exercises and workshops to sharpen your skills.">
-            <img slot="card-icon" src={practical} alt="" />
+            <Image slot="card-icon" src={practical} alt="" />
         </Card>
         <Card title="Expertise" body="Gain insights from seasoned professionals in the programming world.">
-            <img slot="card-icon" src={expertise} alt="" />
+            <Image slot="card-icon" src={expertise} alt="" />
         </Card>
     </section>
     <section class="grid">
         <Card title="Engaging" body="Experience interactive lectures that dive deep into programming concepts.">
-            <img slot="card-icon" src={brain} alt="" />
+            <Image slot="card-icon" src={brain} alt="" />
         </Card>
         <Card title="Real-world" body="Tackle real-world coding challenges to boost your confidence.">
-            <img slot="card-icon" src={recharging} alt="" />
+            <Image slot="card-icon" src={recharging} alt="" />
         </Card>
         <Card title="Global" body="Expand your horizons with workshops and lectures available worldwide.">
-            <img slot="card-icon" src={world} alt="" />
+            <Image slot="card-icon" src={world} alt="" />
         </Card>
     </section>
 </section>

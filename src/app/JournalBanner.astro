@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets"
+
 import Paper from "components/Paper.astro"
 import SubstackSubscribe from "components/SubstackSubscribe.astro"
 ---
@@ -6,7 +8,14 @@ import SubstackSubscribe from "components/SubstackSubscribe.astro"
 <Paper>
     <div class="grid">
         <div class="center">
-            <img width="50%" src="/assets/ht-journal.png" alt="HypeTech Journal logo" />
+            <!-- <img width="50%" src="/assets/ht-journal.png" alt="HypeTech Journal logo" /> -->
+            <Image
+                class="text-logo"
+                width="220"
+                height="150"
+                src="/assets/ht-journal.png"
+                alt="HypeTech Education logo"
+            />
         </div>
         <div>
             <div class="headings">

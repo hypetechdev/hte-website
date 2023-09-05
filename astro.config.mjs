@@ -8,4 +8,7 @@ export default defineConfig({
             noExternal: ["@picocss/pico"],
         },
     },
+    image: {
+        remotePatterns: [{ protocol: "https" }],
+    },
 })

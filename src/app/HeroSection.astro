@@ -1,14 +1,30 @@
+---
+import { Image } from "astro:assets"
+---
+
 <section>
     <div class="grid">
         <div>
-            <img class="text-logo" width="90%" src="/assets/hte-logo-text-dark.png" alt="HypeTech Education logo" />
+            <Image
+                class="text-logo"
+                width="450"
+                height="300"
+                src="/assets/hte-logo-text-dark.png"
+                alt="HypeTech Education logo"
+            />
             <p>
                 Top-notch lectures and workshops,
                 <strong><mark>crafted by industry standards</mark></strong> to elevate your programming game
             </p>
         </div>
         <div class="center">
-            <img class="path-logo" width="70%" src="/assets/hte-logo-dark.png" alt="HypeTech Education path logo" />
+            <Image
+                class="path-logo"
+                width="450"
+                height="300"
+                src="/assets/hte-logo-dark.png"
+                alt="HypeTech Education path logo"
+            />
         </div>
     </div>
 </section>

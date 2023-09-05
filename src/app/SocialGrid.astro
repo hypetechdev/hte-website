@@ -1,24 +1,27 @@
 ---
+import { Image } from "astro:assets"
+
 import linkedin from "../images/linkedin.svg"
 import youtube from "../images/youtube.svg"
 import meetup from "../images/meetup.svg"
+
 import Paper from "components/Paper.astro"
 ---
 
 <div class="grid">
     <Paper>
         <a class="social-icon" href="https://www.meetup.com/hype-tech" target="_blank">
-            <img width="50%" src={meetup} alt="Meetup" />
+            <Image width={200} src={meetup} alt="Meetup" />
         </a>
     </Paper>
     <Paper>
         <a class="center social-icon" href="https://www.youtube.com/c/HypeTechEducation" target="_blank">
-            <img width="50%" src={youtube} alt="YouTube" />
+            <Image width={200} src={youtube} alt="YouTube" />
         </a>
     </Paper>
     <Paper>
         <a class="social-icon" href="https://linkedin.com/company/hypetech-education" target="_blank">
-            <img width="40%" src={linkedin} alt="Linkedin" />
+            <Image width={150} src={linkedin} alt="Linkedin" />
         </a>
     </Paper>
 </div>
