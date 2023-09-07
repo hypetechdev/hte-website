@@ -9,7 +9,9 @@
         "dev": "astro dev",
         "preview": "astro preview",
         "start": "astro dev",
-        "reset": "rm -rf node_modules && yarn"
+        "reset": "rm -rf node_modules && yarn",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write ."
     },
     "dependencies": {
         "@picocss/pico": "^1.5.10",
@@ -17,7 +19,9 @@
         "astro": "^3.0.8"
     },
     "devDependencies": {
-        "@hypetech/prettier-config": "^1.0.1"
+        "@hypetech/prettier-config": "^1.0.1",
+        "prettier": "^3.0.3",
+        "prettier-plugin-astro": "^0.12.0"
     },
     "engines": {
         "node": ">=18.0.0",

@@ -1,16 +1,17 @@
 ---
 import "@picocss/pico"
+import { ViewTransitions } from "astro:transitions"
 
 import GlobalStyles from "components/GlobalStyles.astro"
 import GoogleScripts from "components/GoogleScripts.astro"
+import Nav from "components/Nav.astro"
 import ThemeButton from "components/ThemeButton.astro"
 
 interface Props {
     title: string
-    container?: boolean
 }
 
-const { title, container = true } = Astro.props
+const { title } = Astro.props
 ---
 
 <!doctype html>
@@ -23,10 +24,12 @@ const { title, container = true } = Astro.props
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
         <GoogleScripts />
+        <ViewTransitions />
     </head>
     <body>
         <GlobalStyles />
         <ThemeButton />
+        <Nav />
         <slot />
         <slot name="footer" />
         <script>

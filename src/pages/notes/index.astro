@@ -1,0 +1,17 @@
+---
+import NotesList from "components/notes/NotesList.astro"
+import Layout from "layouts/Layout.astro"
+import { getSortedNotes } from "utils/contentCollections"
+
+const allNotes = await getSortedNotes()
+---
+
+<Layout title="Notes | HTE">
+    <main class="container">
+        <hgroup>
+            <h1>Education Notes</h1>
+            <h3>Coding, learning, & leveling up one day at a time. Learn something new and usefull today.</h3>
+        </hgroup>
+        <NotesList notes={allNotes} />
+    </main>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import type { CollectionEntry } from "astro:content"
+import Paper from "components/Paper.astro"
+
+type Props = {
+    note: CollectionEntry<"notes">
+}
+
+const { note } = Astro.props
+---
+
+<Paper>
+    <hgroup>
+        <h2>{note.data.title}</h2>
+        <h3>{note.data.summary}</h3>
+    </hgroup>
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div>
+            {
+                note.data.categories.map((c: any) => (
+                    <>
+                        <mark>{c}</mark>&nbsp;
+                    </>
+                ))
+            }
+        </div>
+        <a href={`/notes/${note.slug}`}
+            >Read
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-4 h-4"
+                viewBox="0 0 24 24"
+            >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg></a
+        >
+    </div>
+</Paper>

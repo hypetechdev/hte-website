@@ -1,0 +1,63 @@
+---
+import type { CollectionEntry } from "astro:content"
+
+export interface Props {
+    note: CollectionEntry<"notes">
+}
+
+const baseUrl = "https://education.hypetech.io/notes"
+
+const { note } = Astro.props
+---
+
+<div class="social-media">
+    Share On
+    <!-- <a href="https://www.facebook.com/hypetechjobs" target="_blank" data-tooltip="Facebook" rel="noopener noreferrer">
+        <img src="/assets/social/brand-facebook.svg" alt="Facebook" />
+    </a> -->
+    <!-- <a href="https://www.instagram.com/hypetechjobs" target="_blank" data-tooltip="Instagram" rel="noopener noreferrer">
+        <img src="/assets/social/brand-instagram.svg" alt="Instagram" />
+    </a> -->
+    <a
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${baseUrl}/${note.slug}`}
+        target="_blank"
+        data-tooltip="LinkedIn"
+        rel="noopener noreferrer"
+    >
+        <img src="/assets/social/brand-linkedin.svg" alt="LinkedIn" />
+    </a>
+    <a
+        href={`https://twitter.com/intent/tweet?url=${baseUrl}/${note.slug}`}
+        target="_blank"
+        data-tooltip="Twitter"
+        rel="noopener noreferrer"
+    >
+        <img src="/assets/social/brand-twitter.svg" alt="Twitter" />
+    </a>
+</div>
+
+<style>
+    .social-media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .social-media a {
+        margin: 0 0.5rem;
+    }
+
+    .social-media img {
+        width: 2rem;
+    }
+
+    /* social media hover purple blue gradinet with scale  */
+    .social-media a:hover {
+        transform: scale(1.1);
+    }
+
+    .social-media a:hover img {
+        filter: drop-shadow(0 0 0.5rem #a78bfa);
+    }
+</style>

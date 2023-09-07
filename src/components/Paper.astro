@@ -8,6 +8,20 @@ interface Props {
 const { animated = true, animation = "fade-up", animationDuration = 1500 } = Astro.props
 ---
 
-<article data-aos={animated ? animation : undefined} data-aos-duration={animationDuration}>
+<article data-aos={animated ? animation : undefined} data-aos-duration={animationDuration} style="padding: 3rem;">
     <slot />
 </article>
+
+<!-- <style>
+    article {
+        box-shadow:
+            0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+    }
+    /* hover */
+    article:hover {
+        box-shadow:
+            0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+    }
+</style> -->

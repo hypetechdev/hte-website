@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from "astro:content"
+import SingleNote from "./SingleNote.astro"
+type Props = {
+    notes: CollectionEntry<"notes">[]
+}
+
+const { notes } = Astro.props
+---
+
+<section>
+    {
+        notes.map((currentNote, index, notes) => {
+            if (index % 2 === 0) {
+                return (
+                    <div class="grid">
+                        <SingleNote note={currentNote} />
+                        {notes[index + 1] ? <SingleNote note={notes[index + 1]} /> : <div />}
+                    </div>
+                )
+            }
+        })
+    }
+</section>
