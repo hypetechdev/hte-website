@@ -1,20 +1,21 @@
 ---
 import "@picocss/pico"
+import { ViewTransitions } from "astro:transitions"
 
 import GlobalStyles from "components/GlobalStyles.astro"
 import GoogleScripts from "components/GoogleScripts.astro"
-import ThemeButton from "components/ThemeButton.astro"
+import Nav from "components/Nav.astro"
+// import ThemeButton from "components/ThemeButton.astro"
 
 interface Props {
     title: string
-    container?: boolean
 }
 
-const { title, container = true } = Astro.props
+const { title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="HypeTech Education" />
@@ -23,10 +24,13 @@ const { title, container = true } = Astro.props
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
         <GoogleScripts />
+        <ViewTransitions />
+        <script is:inline defer data-domain="education.hypetech.io" src="https://analytics.hypetech.dev/js/script.js"></script>
     </head>
     <body>
         <GlobalStyles />
-        <ThemeButton />
+        <!-- <ThemeButton /> -->
+        <Nav />
         <slot />
         <slot name="footer" />
         <script>

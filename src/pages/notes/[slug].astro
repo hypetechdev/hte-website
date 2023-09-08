@@ -1,0 +1,55 @@
+---
+import Footer from "app/Footer.astro"
+import { getCollection, getEntryBySlug } from "astro:content"
+import ShareBar2 from "components/ShareBar2.astro"
+import NotesGrid from "components/notes/NotesGrid.astro"
+import NotesList from "components/notes/NotesList.astro"
+import BlogLayout from "layouts/BlogLayout.astro"
+
+export async function getStaticPaths() {
+    return (await getCollection("notes")).map((note: any) => ({
+        params: {
+            slug: note.slug,
+        },
+    }))
+}
+
+const { slug } = Astro.params
+
+const note = await getEntryBySlug("notes", slug as string)
+
+if (!note) {
+    return Astro.redirect("/404")
+}
+
+const notes = await getCollection("notes")
+
+const remainingNotes = notes.filter((n) => n.slug !== note.slug)
+const relatedNotes = remainingNotes.filter((n) =>
+    n.data.categories.some((category) => note.data.categories.includes(category))
+)
+
+const { Content } = await note.render()
+---
+
+<BlogLayout>
+    <main>
+        <hgroup>
+            <h1>{note.data.title}</h1>
+            <h3>{note.data.author} | {note.data.pubDate}</h3>
+        </hgroup>
+        <span>
+            ← <a href="/notes">All notes</a>
+        </span>
+
+        <article>
+            <Content />
+        </article>
+        <ShareBar2 note={note} />
+        <br />
+        <br />
+        {!!relatedNotes.length && <h3>Related notes</h3>}
+        <NotesGrid notes={relatedNotes} />
+    </main>
+    <Footer slot="footer" />
+</BlogLayout>

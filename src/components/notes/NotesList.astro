@@ -1,0 +1,13 @@
+---
+import type { CollectionEntry } from "astro:content"
+import SingleNote from "./SingleNote.astro"
+type Props = {
+    notes: CollectionEntry<"notes">[]
+}
+
+const { notes } = Astro.props
+---
+
+<section>
+    {notes.map((currentNote) => <SingleNote note={currentNote} />)}
+</section>

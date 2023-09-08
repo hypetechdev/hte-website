@@ -11,4 +11,5 @@ export default defineConfig({
     image: {
         remotePatterns: [{ protocol: "https" }],
     },
+    output: "static",
 })
