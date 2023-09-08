@@ -17,7 +17,7 @@
     })
 
     function toggleTheme() {
-        const currentTheme = document.documentElement.getAttribute("data-theme") ?? "dark"
+        const currentTheme = localStorage.getItem("theme")
         const theme = currentTheme === "dark" ? "light" : "dark"
 
         setTheme(theme)

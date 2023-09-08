@@ -3,7 +3,7 @@ title: Explaining work ethic
 pubDate: "2016-12-17"
 author: "marsicdev"
 summary: Works a lot ≠ Has good work ethic
-categories: [software]
+categories: [business, productivity]
 ---
 
 You’ll often hear people say someone has good “work ethic” if they’re putting in long hours.

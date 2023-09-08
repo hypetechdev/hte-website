@@ -3,7 +3,7 @@ title: Rubber duck debugging
 pubDate: "2018-12-27"
 author: marsicdev
 summary: Use a rubber duck to help you review code
-categories: [software]
+categories: [programming, development]
 ---
 
 In software engineering, rubber duck debugging is a method of debugging code. The name is a reference to a story in the book The Pragmatic Programmer in which a programmer would carry around a rubber duck and debug their code by forcing themselves to explain it, line-by-line, to the duck. Many other terms exist for this technique, often involving different inanimate objects.

@@ -3,7 +3,7 @@ title: "Code commenting and modeling"
 pubDate: "2015-01-09"
 author: "marsicdev"
 summary: Don't try to model everything! You need to step back and let the code speak for itself.
-categories: [software]
+categories: [programming]
 ---
 
 Software engineering is hard to get right. One person's pretty data model looks like metadata-addiction to another person.

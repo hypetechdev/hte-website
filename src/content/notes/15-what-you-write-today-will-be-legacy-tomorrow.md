@@ -3,7 +3,7 @@ title: "What you write today, will be legacy tomorrow"
 pubDate: "2016-10-10"
 author: "marsicdev"
 summary: This is a normal process tied to software development
-categories: [software]
+categories: [software, legacy]
 ---
 
 If you have ever worked on an already started project, then you know what legacy code is. And you also know that you can find almost anything in there. But this is a normal process tied to software development.

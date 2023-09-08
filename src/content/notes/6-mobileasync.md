@@ -3,7 +3,7 @@ title: "Mobile ❤ async"
 pubDate: "2015-02-16"
 author: "marsicdev"
 summary: Async is more natural in a lot of cases on a mobile device. Why waste valuable battery life polling for updates if you can react on events pushed to you.
-categories: [software]
+categories: [programming]
 ---
 
 Async is more natural in a lot of cases on a mobile device. Why waste valuable battery life polling for updates if you can react on events pushed to you.

@@ -3,7 +3,7 @@ title: Becoming great developer
 pubDate: "2016-10-21"
 author: marsicdev
 summary: Programming Wisdom
-categories: [software]
+categories: [programming, development]
 ---
 
 > Every great developer you know got there by solving problems they were unqualified to solve until they actually did it. - Patrick McKenzie;

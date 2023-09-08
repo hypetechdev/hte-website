@@ -3,7 +3,7 @@ title: "Programming is full of acronyms"
 pubDate: "2015-04-09"
 author: "marsicdev"
 summary: SOLID, KISS, DRY, STUPID
-categories: [software]
+categories: [programming]
 ---
 
 Programming is full of acronyms

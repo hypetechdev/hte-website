@@ -3,7 +3,7 @@ title: "Threads, Sync, Async"
 pubDate: "2015-04-03"
 author: "marsicdev"
 summary: Thoughts collection about these important terms
-categories: [software]
+categories: [programming]
 ---
 
 Subject title is to general so the thoughts following will be as well. Issues is to general to have a real answer.

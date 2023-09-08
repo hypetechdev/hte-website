@@ -3,7 +3,7 @@ title: Dunning-Kruger Effect
 pubDate: "2016-05-01"
 author: "marsicdev"
 summary: Unskilled persons tend to mistakenly assess their own abilities as being much more competent than they actually are.
-categories: [software]
+categories: [programming]
 ---
 
 Researchers David Dunning and Justin Kruger, conducting an experiment in 1999, observed a phenomenon that's come to be known as the [Dunning-Kruger effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect):

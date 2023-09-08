@@ -3,7 +3,7 @@ title: "Over use of animation in UI design"
 pubDate: "2015-08-28"
 author: "marsicdev"
 summary: Exploring the over use of animation in UI design
-categories: [design]
+categories: [design, animation]
 ---
 
 We should be careful not to repeat mistakes of the past which valued form over function. Animation can and should be used to enhance the user experience of your website or application, however it’s very unlikely that a purely cosmetic animation effect will make for a better product.
