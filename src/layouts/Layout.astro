@@ -5,7 +5,7 @@ import { ViewTransitions } from "astro:transitions"
 import GlobalStyles from "components/GlobalStyles.astro"
 import GoogleScripts from "components/GoogleScripts.astro"
 import Nav from "components/Nav.astro"
-import ThemeButton from "components/ThemeButton.astro"
+// import ThemeButton from "components/ThemeButton.astro"
 
 interface Props {
     title: string
@@ -25,10 +25,11 @@ const { title } = Astro.props
         <title>{title}</title>
         <GoogleScripts />
         <ViewTransitions />
+        <script is:inline defer data-domain="education.hypetech.io" src="https://analytics.hypetech.dev/js/script.js"></script>
     </head>
     <body>
         <GlobalStyles />
-        <ThemeButton />
+        <!-- <ThemeButton /> -->
         <Nav />
         <slot />
         <slot name="footer" />
